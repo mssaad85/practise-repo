@@ -37,6 +37,6 @@ jobs:
       - name: Install surge 
         run : npm install -g surge
       - name: Run surge
-        run: surge ./ practise-repo.surge.sh --toke{{secrets.SURGETOKEN}} 
+        run: surge ./ practise-repo.surge.sh --token ${{secrets.SURGETOKEN}} 
           echo Add other actions to build,
           echo test, and deploy your project.
