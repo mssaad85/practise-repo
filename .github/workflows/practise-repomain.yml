@@ -34,9 +34,9 @@ jobs:
         uses: actions/setup-Node@v2-beta
         with: 
           node-version : 14
-      -name: Install surge 
+      - name: Install surge 
         run : npm install -g surge
-      -name: Run surge
+      - name: Run surge
         run: surge ./ practise-repo.surge.sh --toke{{secrets.SURGETOKEN}} 
           echo Add other actions to build,
           echo test, and deploy your project.
