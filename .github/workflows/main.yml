@@ -30,11 +30,11 @@ jobs:
         run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
-       - name: Install NodeJS
-        run: actions/checkout@v2-beta
+       - name : install NodeJs
+        uses: actions/checkout@v2-beta
         with:
           Node-version : 12
-        -name : install surge
-         run : npm install -g surge
-    -name : run surge 
-     run : surge ./practise-repo.surge.sh --token ${{secrets.SURGETOKEN}}
+      - name : install surge
+        run : npm install -g surge
+      - name : run surge 
+        run : surge ./practise-repo.surge.sh --token ${{secrets.SURGETOKEN}}
